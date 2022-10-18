@@ -2824,12 +2824,12 @@ static void executeHandler( uint32_t index,
          */
         otaAgent.state = otaTransitionTable[ index ].nextState;
     }
-    else
-    {
-        LogError( ( "Failed to execute state transition handler: "
-                    "Handler returned error: OtaErr_t=%s",
-                    OTA_Err_strerror( err ) ) );
-    }
+    // else
+    // {
+    //     LogError( ( "Failed to execute state transition handler: "
+    //                 "Handler returned error: OtaErr_t=%s",
+    //                 OTA_Err_strerror( err ) ) );
+    // }
 
     LogInfo( ( "Current State=[%s]"
                ", Event=[%s]"
