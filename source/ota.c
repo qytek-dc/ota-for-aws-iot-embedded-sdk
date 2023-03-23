@@ -2953,16 +2953,16 @@ static void executeHandler( uint32_t index,
     }
     else
     {
-        LogError( ( "Failed to execute state transition handler: "
-                    "Handler returned error: OtaErr_t=%s",
-                    OTA_Err_strerror( err ) ) );
+//        LogError( ( "Failed to execute state transition handler: "
+//                    "Handler returned error: OtaErr_t=%s",
+//                    OTA_Err_strerror( err ) ) );
 
-        LogError( ( "Current State=[%s]"
-                    ", Event=[%s]"
-                    ", New state=[%s]",
-                    pOtaAgentStateStrings[ otaAgent.state ],
-                    pOtaEventStrings[ pEventMsg->eventId ],
-                    pOtaAgentStateStrings[ otaTransitionTable[ index ].nextState ] ) );
+//        LogError( ( "Current State=[%s]"
+//                    ", Event=[%s]"
+//                    ", New state=[%s]",
+//                    pOtaAgentStateStrings[ otaAgent.state ],
+//                    pOtaEventStrings[ pEventMsg->eventId ],
+//                    pOtaAgentStateStrings[ otaTransitionTable[ index ].nextState ] ) );
     }
 }
 
