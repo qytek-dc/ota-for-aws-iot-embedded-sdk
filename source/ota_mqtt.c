@@ -903,7 +903,10 @@ OtaErr_t requestJob_Mqtt( const OtaAgentContext_t * pAgentCtx )
     msgSize += reqCounterStringLength - 1;
     strncpy( &pMsg[ msgSize ], ":", MSG_GET_NEXT_BUFFER_SIZE - msgSize );
     msgSize++;
+#pragma GCC diagnostic push
+#pragma GCC diagnostic ignored "-Wstringop-truncation"
     strncpy( &pMsg[ msgSize ], ( const char * ) pAgentCtx->pThingName, xThingNameLength );
+#pragma GCC diagnostic pop
     msgSize += xThingNameLength;
     strncpy( &pMsg[ msgSize ], "\"}", MSG_GET_NEXT_BUFFER_SIZE - msgSize );
     msgSize += 2U;

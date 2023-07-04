@@ -320,7 +320,7 @@
  * <b>Default value:</b>  '0'
  */
 #ifndef OTA_USE_NONCONST_APPVERSION
-    #define OTA_USE_NONCONST_APPVERSION    ( 0U )
+    #define OTA_USE_NONCONST_APPVERSION    ( 1U )
 #endif
 
 /**
